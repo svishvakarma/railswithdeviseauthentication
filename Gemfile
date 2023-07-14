@@ -19,7 +19,15 @@ gem "puma", "~> 5.0"
 gem "jsbundling-rails"
 
 #middle layer
-gem 'rack-cors' 
+gem 'rack-cors'
+
+#added devise  
+gem 'devise'
+
+#authentication
+gem 'devise-jwt'
+gem 'jsonapi-serializer'
+
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
