@@ -26,6 +26,9 @@ gem 'devise'
 
 #authentication
 gem 'devise-jwt'
+
+#bycrpt
+gem 'bcrypt-ruby'
 gem 'jsonapi-serializer'
 
 

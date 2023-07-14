@@ -3,4 +3,5 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations:'users/registrations'
   }
+  post '/auth/login', to: 'authentication#login'
 end
