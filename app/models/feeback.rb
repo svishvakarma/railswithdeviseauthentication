@@ -1,0 +1,2 @@
+class Feeback < ApplicationRecord
+end

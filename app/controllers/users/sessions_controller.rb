@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class Users::SessionsController < Devise::SessionsController
-  
+  before_action :authorize_request, except: :create
+
   def new
    @user = User.new
   end
@@ -11,7 +12,10 @@ class Users::SessionsController < Devise::SessionsController
     
      if @user && @user.valid_password?(user_params[:password])
       sign_in(@user)
-      render json: { message: 'User signed in' }
+      token = JsonWebToken.encode(user_id: @user.id)
+			time = Time.now + 24.hours.to_i
+			render json: { token: token, exp: time.strftime("%m-%d-%Y %H:%M"),
+											email: @user.email }, status: :ok
      else
       render json: { message: 'Invalid email or password' }
      end

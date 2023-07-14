@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @feeback %>
+
+<div>
+  <%= link_to "Edit this feeback", edit_feeback_path(@feeback) %> |
+  <%= link_to "Back to feebacks", feebacks_path %>
+
+  <%= button_to "Destroy this feeback", @feeback, method: :delete %>
+</div>

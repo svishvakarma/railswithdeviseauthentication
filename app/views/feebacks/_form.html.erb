@@ -1,0 +1,17 @@
+<%= form_with(model: feeback) do |form| %>
+  <% if feeback.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(feeback.errors.count, "error") %> prohibited this feeback from being saved:</h2>
+
+      <ul>
+        <% feeback.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

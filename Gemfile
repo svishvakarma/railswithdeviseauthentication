@@ -20,6 +20,7 @@ gem "jsbundling-rails"
 
 #middle layer
 gem 'rack-cors'
+gem 'byebug'
 
 #added devise  
 gem 'devise'

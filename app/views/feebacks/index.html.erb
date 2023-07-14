@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Feebacks</h1>
+
+<div id="feebacks">
+  <% @feebacks.each do |feeback| %>
+    <%= render feeback %>
+    <p>
+      <%= link_to "Show this feeback", feeback %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New feeback", new_feeback_path %>
